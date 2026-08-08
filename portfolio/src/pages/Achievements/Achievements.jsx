@@ -1,0 +1,117 @@
+import { motion } from 'framer-motion';
+const certificates = [
+  {
+    title: "Programming Using C++",
+    issuer: "Infosys Springboard",
+    date: "May 30, 2025",
+    desc: "Gained proficiency in C++ programming, including OOP concepts, data structures, and algorithms.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+  },
+  {
+    title: "Python Fundamentals",
+    issuer: "Infosys Springboard",
+    date: "December 2, 2025",
+    desc: "Mastered core Python concepts including data structures, functions, and object-oriented programming.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+  },
+  {
+    title: "Unix Linux OS",
+    issuer: "Infosys Springboard",
+    date: "March 1, 2026",
+    desc: "Developed proficiency in Unix/Linux command line, shell scripting, and system administration.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+  },
+  {
+    title: "JavaScript Intermediate",
+    issuer: "HackerRank",
+    date: "11 Jan, 2026",
+    desc: "Foundational understanding of JavaScript concepts, including DOM manipulation and asynchronous programming.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+  },
+  {
+    title: "Problem Solving Certificate",
+    issuer: "HackerRank",
+    date: "14 Jan 2026",
+    desc: "Demonstrated proficiency in problem-solving and algorithmic thinking.",
+    image: "https://cdn.simpleicons.org/hackerrank/00EA64"
+  },
+  {
+    title: "Software Engineering Fundamentals",
+    issuer: "HackerRank",
+    date: "23 Jan 2026",
+    desc: "Gained foundational knowledge in software engineering principles and practices.",
+    image: "https://cdn.simpleicons.org/hackerrank/00EA64"
+  },
+  {
+    title: "Frontend Developer (React)",
+    issuer: "HackerRank",
+    date: "11 Jan, 2026",
+    desc: "Proficiency in React.js for building dynamic and responsive user interfaces.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+  },
+  {
+    title: "CSS Fundamentals",
+    issuer: "HackerRank",
+    date: "11 Jan, 2026",
+    desc: "Proficiency in CSS for styling and layout of web applications.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+  }
+];
+export default function Achievements() {
+  const duplicatedCerts = [...certificates, ...certificates, ...certificates];
+  return (
+    <section id="achievements" className="w-full py-12 lg:py-16 px-6 relative z-10 overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-2 mb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col gap-2"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 transition-colors">
+            Achievements & Certifications
+          </h2>
+          <p className="text-lg md:text-xl font-medium text-zinc-600 dark:text-zinc-400 tracking-tight leading-snug transition-colors">
+            Milestones and recognitions earned through continuous learning and dedication.
+          </p>
+        </motion.div>
+      </div>
+      <div className="relative w-full overflow-hidden flex items-center [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4">
+        <motion.div
+          className="flex whitespace-nowrap items-stretch gap-6 w-max group"
+          animate={{ x: ["0%", "-33.333333%"] }}
+          transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+        >
+          {duplicatedCerts.map((cert, index) => (
+            <div 
+              key={`${cert.title}-${index}`}
+              className="w-[280px] md:w-[400px] shrink-0 p-6 bg-zinc-50 dark:bg-black/40 backdrop-blur-xl border border-zinc-200 dark:border-zinc-800 rounded-3xl flex flex-col gap-4 whitespace-normal transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
+            >
+              <div className="h-40 md:h-48 w-full bg-zinc-100 dark:bg-zinc-900 rounded-2xl overflow-hidden relative group/image border border-zinc-200/50 dark:border-zinc-800/50 flex items-center justify-center">
+                <img 
+                  src={cert.image} 
+                  alt={cert.title}
+                  className="w-24 h-24 md:w-32 md:h-32 object-contain group-hover/image:scale-110 transition-transform duration-500"
+                  onError={(e) => {
+                    e.target.src = 'https://placehold.co/400x300/white/086a73?text=Certificate';
+                  }}
+                />
+                <div className="absolute inset-0 bg-black/5 dark:bg-black/20 opacity-0 group-hover/image:opacity-100 transition-opacity duration-500" />
+              </div>
+              <div className="flex-1 flex flex-col">
+                <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-2 line-clamp-1 transition-colors">{cert.title}</h3>
+                <div className="flex justify-between items-center text-sm mb-4">
+                  <span className="text-blue-600 dark:text-blue-400 font-bold">{cert.issuer}</span>
+                  <span className="text-zinc-500 dark:text-zinc-400 text-xs font-medium">{cert.date}</span>
+                </div>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400 line-clamp-3 leading-relaxed transition-colors mt-auto">
+                  {cert.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
