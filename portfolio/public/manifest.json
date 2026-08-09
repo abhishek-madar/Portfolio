@@ -1,0 +1,22 @@
+{
+  "name": "Abhishek Madar",
+  "short_name": "Abhishek",
+  "description": "Abhishek Madar — Problem Solver, Developer & Designer",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

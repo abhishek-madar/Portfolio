@@ -23,7 +23,7 @@ const itemVariants = {
 };
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen w-full overflow-hidden flex items-center justify-center pt-20 transition-colors">
+    <section id="home" className="relative w-full overflow-hidden flex items-center justify-center pt-20 transition-colors" style={{ minHeight: '100dvh' }}>
       {}
       <div 
         className="absolute inset-0 bg-white dark:bg-black -z-10 pointer-events-none" 

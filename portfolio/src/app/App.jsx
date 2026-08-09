@@ -13,7 +13,7 @@ import Silk from '../shared/ui/Silk';
 export default function App() {
   return (
     <SmoothScroll>
-      <div className="relative min-h-screen text-zinc-950 dark:text-zinc-50 font-sans selection:bg-primary/30 bg-white dark:bg-black transition-colors duration-300">
+      <div className="relative text-zinc-950 dark:text-zinc-50 font-sans selection:bg-primary/30 bg-white dark:bg-black transition-colors duration-300" style={{ minHeight: '100dvh' }}>
         {}
         <div className="fixed inset-0 z-0 pointer-events-none opacity-50 dark:opacity-40 transition-opacity">
           <Silk 
