@@ -112,7 +112,7 @@ export default function ElixCaseStudyModal({ isOpen, onClose }) {
                       Written by: Abhishek Madar
                     </p>
                     <p className="font-serif text-[11px] text-[#2c241b]">
-                      Project Repository: <a href="https://github.com/abhishek-madar/Elix" target="_blank" className="underline decoration-[#8b7355]/30 underline-offset-4">github.com/abhishek-madar/Elix</a>
+                      Project Repository: <a href="https://github.com/abhishek-madar/elix-ai" target="_blank" className="underline decoration-[#8b7355]/30 underline-offset-4">github.com/abhishek-madar/elix-ai</a>
                     </p>
                     <p className="font-serif text-[11px] text-[#2c241b]">
                       Publication Date: 2026
@@ -468,7 +468,7 @@ export default function ElixCaseStudyModal({ isOpen, onClose }) {
                     </h3>
                     <div className="flex flex-col gap-3.5 w-full">
                       <a
-                        href="https://elixaiapp.vercel.app"
+                        href="https://elixprompts-ai.vercel.app"
                         target="_blank"
                         rel="noreferrer"
                         className="relative overflow-hidden group py-3 px-6 border border-[#8b7355] bg-[#8b7355]/5 font-serif uppercase tracking-[0.15em] text-[10px] transition-all duration-300 block text-center"
@@ -479,7 +479,7 @@ export default function ElixCaseStudyModal({ isOpen, onClose }) {
                         <div className="absolute inset-0 bg-[#8b7355] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
                       </a>
                       <a
-                        href="https://github.com/abhishek-madar/Elix"
+                        href="https://github.com/abhishek-madar/elix-ai"
                         target="_blank"
                         rel="noreferrer"
                         className="relative overflow-hidden group py-3 px-6 border border-[#8b7355] bg-[#8b7355]/5 font-serif uppercase tracking-[0.15em] text-[10px] transition-all duration-300 block text-center"

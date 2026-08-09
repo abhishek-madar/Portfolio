@@ -651,7 +651,7 @@ await new Transaction({
                     </h3>
                     <div className="flex flex-col gap-3.5 w-full">
                       <a
-                        href="https://laundry-service-dun.vercel.app"
+                        href="https://freshclean-seven.vercel.app"
                         target="_blank"
                         rel="noreferrer"
                         className="relative overflow-hidden group py-3 px-6 border border-[#8b7355] bg-[#8b7355]/5 font-serif uppercase tracking-[0.15em] text-[10px] transition-all duration-300 block text-center"
@@ -662,7 +662,7 @@ await new Transaction({
                         <div className="absolute inset-0 bg-[#8b7355] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
                       </a>
                       <a
-                        href="https://github.com/abhishek-madar/laundry_service"
+                        href="https://github.com/abhishek-madar/freshclean-laundry"
                         target="_blank"
                         rel="noreferrer"
                         className="relative overflow-hidden group py-3 px-6 border border-[#8b7355] bg-[#8b7355]/5 font-serif uppercase tracking-[0.15em] text-[10px] transition-all duration-300 block text-center"

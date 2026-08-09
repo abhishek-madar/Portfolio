@@ -16,12 +16,12 @@ const projectData = [
   {
     title: "Elix — AI Prompt Intelligence",
     category: "AI / Full Stack Systems",
-    domain: "elixaiapp.vercel.app",
+    domain: "elixprompts-ai.vercel.app",
     description: "An enterprise-grade AI prompt engineering workspace that transforms raw prompts into structured system instructions, strategic analysis, and interactive Mermaid.js flowcharts with zero-downtime 3-tier fallback.",
     tech: ["Next.js 16", "React 19", "TypeScript", "Gemini 2.5", "Groq API", "OpenAI API", "Mermaid.js"],
     links: {
-      live: "https://elixaiapp.vercel.app",
-      github: "https://github.com/abhishek-madar/Elix",
+      live: "https://elixprompts-ai.vercel.app",
+      github: "https://github.com/abhishek-madar/elix-ai",
       caseStudy: "#"
     },
     featured: true, 
@@ -30,13 +30,13 @@ const projectData = [
   {
     title: "FreshClean Laundry",
     category: "Full Stack Service",
-    domain: "laundry-service-dun.vercel.app",
+    domain: "freshclean-seven.vercel.app",
     description: "A full-stack management system with secure JWT authentication. Includes an Integrated Digital Wallet, a Multi-Step Booking Wizard, and an automated scheduling system.",
     tech: ["Node.js", "Express", "MongoDB", "JavaScript"],
     image: freshCleanImg,
     links: {
-      live: "https://laundry-service-dun.vercel.app",
-      github: "https://github.com/abhishek-madar/laundry_service",
+      live: "https://freshclean-seven.vercel.app",
+      github: "https://github.com/abhishek-madar/freshclean-laundry",
       caseStudy: "#"
     },
     featured: false 
@@ -44,13 +44,13 @@ const projectData = [
   {
     title: "LifeLink Blood Bank",
     category: "Healthcare Management",
-    domain: "lifelinkbloodbank.onrender.com",
+    domain: "lifelink-blood.vercel.app",
     description: "A MERN-stack Blood Bank Management System. Features a Donation Eligibility Engine, dynamic PDFKit certificate generation, and real-time inventory reports.",
     tech: ["Node.js", "Express", "MongoDB", "React"],
     image: lifeLinkPreviewImg,
     links: {
-      live: "https://lifelinkbloodbank.onrender.com",
-      github: "https://github.com/abhishek-madar/Blood-Bank-Management-System-LifeLink",
+      live: "https://lifelink-blood.vercel.app",
+      github: "https://github.com/abhishek-madar/lifelink",
       caseStudy: "#"
     },
     featured: false 
@@ -64,7 +64,7 @@ const projectData = [
     image: csarmsPreviewImg,
     links: {
       live: "https://csarms.vercel.app",
-      github: "https://github.com/abhishek-madar/csarms-team",
+      github: "https://github.com/abhishek-madar/csarms",
       caseStudy: "#"
     },
     featured: true

@@ -113,7 +113,7 @@ export default function CSARMSCaseStudyModal({ isOpen, onClose }) {
                   </div>
                   <div className="mt-auto space-y-1.5 text-center w-full pt-2 border-t border-[#8b7355]/20 text-[10px]">
                     <p className="font-['Playfair_Display'] text-sm font-bold">Author: Abhishek Madar</p>
-                    <p className="font-mono text-[9px] text-[#5c4d3c]">Repository: github.com/abhishek-madar/csarms-team</p>
+                    <p className="font-mono text-[9px] text-[#5c4d3c]">Repository: github.com/abhishek-madar/csarms</p>
                     <p className="text-[9px] text-[#5c4d3c]">Primary Stack: MongoDB, Express 5, React 19, Node.js, JWT, Recharts</p>
                     <p className="font-serif text-[9px] text-[#8b7355] font-bold uppercase tracking-widest pt-1">
                       2026 • Technical Case Study &amp; Benchmark Monograph
@@ -783,7 +783,7 @@ app.listen(5001, () => {
                         <div className="absolute inset-0 bg-[#8b7355] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out z-0"></div>
                       </a>
                       <a
-                        href="https://github.com/abhishek-madar/csarms-team"
+                        href="https://github.com/abhishek-madar/csarms"
                         target="_blank"
                         rel="noreferrer"
                         className="relative overflow-hidden group py-3 px-6 border border-[#8b7355] bg-[#8b7355]/5 font-serif uppercase tracking-[0.15em] text-[10px] transition-all duration-300 block text-center"
