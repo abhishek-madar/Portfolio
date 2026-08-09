@@ -25,6 +25,7 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-[100] flex items-center justify-center p-4 transition-all duration-300`}
+      style={{ paddingTop: 'max(1rem, env(safe-area-inset-top))' }}
     >
       <div 
         className={`flex items-center justify-between w-full max-w-7xl rounded-full px-6 py-3 transition-all duration-500
