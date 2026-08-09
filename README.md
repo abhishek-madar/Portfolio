@@ -64,6 +64,21 @@ To preview the production build locally:
 npm run preview
 ```
 
+## Deployment
+
+This project is configured for seamless deployment on Vercel.
+
+### Deploying to Vercel via GitHub
+
+1. Push your code to your GitHub repository.
+2. Go to [Vercel](https://vercel.com/) and log in with GitHub.
+3. Click **Add New** -> **Project** and import your GitHub repository.
+4. **Important**: In the configuration step, click **Edit** next to **Root Directory** and select the `portfolio` folder.
+5. Ensure the Framework Preset is detected as **Vite**.
+6. Click **Deploy**.
+
+*Note: The project includes a `vercel.json` file to ensure client-side routing (React Router) works seamlessly when refreshed on Vercel.*
+
 ## License
 
 This project is licensed under the MIT License.
