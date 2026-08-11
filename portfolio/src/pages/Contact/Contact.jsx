@@ -3,7 +3,7 @@ import ScrambledText from '../../shared/animations/ScrambledText';
 export default function Contact() {
   return (
     <section id="contact" className="py-12 lg:py-16 relative w-full overflow-hidden flex flex-col items-center">
-      <div className="w-full max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center text-center">
+      <div className="w-full max-w-7xl mx-auto px-[clamp(1rem,4vw,3rem)] relative z-10 flex flex-col items-center text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
