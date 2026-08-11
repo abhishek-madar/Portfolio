@@ -59,60 +59,58 @@ export default function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="w-full max-w-[1400px] mx-auto px-6 md:px-12 relative"
+          className="w-full max-w-[1400px] mx-auto px-[clamp(1rem,4vw,3rem)] relative"
         >
-          {/* ─── Center Image (The Depth Layer: z-20) ─── */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute left-1/2 -translate-x-1/2 top-4 md:-top-12 lg:-top-20 z-20 pointer-events-none w-[320px] md:w-[600px] lg:w-[750px]"
-          >
-            <div className="relative w-full flex justify-center">
-              <img
-                src={profilePhoto}
-                alt="Abhishek Madar"
-                className="relative w-full object-cover object-top"
-                style={{
-                  // Fades the bottom of the image smoothly into the background
-                  maskImage: 'linear-gradient(to bottom, black 60%, transparent 95%)',
-                  WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 95%)',
-                }}
-              />
-            </div>
-          </motion.div>
-
-          {/* ─── Background Typography Layer (Solid: z-10) ─── */}
-          <div className="relative z-10 flex flex-col items-center w-full">
-            {/* Top Name */}
-            <motion.div variants={itemVariants} className="w-full flex justify-between items-center mb-4 md:mb-8 px-2 md:px-8">
-              <h1 className="text-[clamp(3rem,9vw,11rem)] font-extrabold tracking-[-0.02em] leading-none text-zinc-900 dark:text-white font-playfair uppercase select-none whitespace-nowrap">
+          {/* ─── Hero Center Container (Text & Image) ─── */}
+          <div className="relative w-full flex flex-col items-center mt-4 md:mt-8">
+            
+            {/* 1. Background Typography Layer (Solid: z-10) */}
+            <motion.div variants={itemVariants} className="w-full flex flex-col md:flex-row justify-between items-center px-2 md:px-8 leading-[0.85] md:leading-none relative z-10 overflow-hidden">
+              <h1 className="text-[clamp(2rem,16vw,11rem)] md:text-[clamp(3rem,9vw,11rem)] font-extrabold tracking-[-0.02em] text-zinc-900 dark:text-white font-playfair uppercase select-none whitespace-nowrap">
                 ABHISHEK
               </h1>
-              <h1 className="text-[clamp(3rem,9vw,11rem)] font-extrabold tracking-[-0.02em] leading-none text-zinc-900 dark:text-white font-playfair uppercase select-none whitespace-nowrap">
+              <h1 className="text-[clamp(2.5rem,18vw,11rem)] md:text-[clamp(3rem,9vw,11rem)] font-extrabold tracking-[-0.02em] text-zinc-900 dark:text-white font-playfair uppercase select-none whitespace-nowrap">
                 MADAR
               </h1>
             </motion.div>
-          </div>
 
-          {/* ─── Foreground Typography Layer (Stroke Outline: z-30) ─── */}
-          {/* This sits IN FRONT of the image, drawing just the outline of the text over the person */}
-          <div className="absolute top-0 left-0 w-full z-30 flex flex-col items-center pointer-events-none">
-            <motion.div variants={itemVariants} className="w-full flex justify-between items-center mb-4 md:mb-8 px-2 md:px-8">
+            {/* 2. Center Image (The Depth Layer: z-20) */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute left-1/2 -translate-x-1/2 top-4 md:top-8 lg:top-12 z-20 pointer-events-none w-[135vw] sm:w-[500px] md:w-[700px] lg:w-[850px] max-w-none"
+            >
+              <div className="relative w-full flex justify-center">
+                <img
+                  src={profilePhoto}
+                  alt="Abhishek Madar"
+                  className="relative w-full object-cover object-top"
+                  style={{
+                    maskImage: 'linear-gradient(to bottom, black 60%, transparent 95%)',
+                    WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 95%)',
+                  }}
+                />
+              </div>
+            </motion.div>
+
+            {/* 3. Foreground Typography Layer (Stroke Outline: z-30) */}
+            {/* This sits IN FRONT of the image, drawing exactly the same text but as an outline */}
+            <motion.div variants={itemVariants} className="absolute inset-0 w-full flex flex-col md:flex-row justify-between items-center px-2 md:px-8 leading-[0.85] md:leading-none z-30 pointer-events-none overflow-hidden">
               <h1 
-                className="text-[clamp(3rem,9vw,11rem)] font-extrabold tracking-[-0.02em] leading-none text-zinc-900 dark:text-white font-playfair uppercase select-none whitespace-nowrap opacity-60 dark:opacity-40"
+                className="text-[clamp(2rem,16vw,11rem)] md:text-[clamp(3rem,9vw,11rem)] font-extrabold tracking-[-0.02em] text-zinc-900 dark:text-white font-playfair uppercase select-none whitespace-nowrap opacity-70 dark:opacity-50"
                 style={{ 
                   color: 'transparent',
-                  WebkitTextStroke: '1.5px currentColor'
+                  WebkitTextStroke: '2px currentColor'
                 }}
               >
                 ABHISHEK
               </h1>
               <h1 
-                className="text-[clamp(3rem,9vw,11rem)] font-extrabold tracking-[-0.02em] leading-none text-zinc-900 dark:text-white font-playfair uppercase select-none whitespace-nowrap opacity-60 dark:opacity-40"
+                className="text-[clamp(2.5rem,18vw,11rem)] md:text-[clamp(3rem,9vw,11rem)] font-extrabold tracking-[-0.02em] text-zinc-900 dark:text-white font-playfair uppercase select-none whitespace-nowrap opacity-70 dark:opacity-50"
                 style={{ 
                   color: 'transparent',
-                  WebkitTextStroke: '1.5px currentColor'
+                  WebkitTextStroke: '2px currentColor'
                 }}
               >
                 MADAR
@@ -121,22 +119,19 @@ export default function Hero() {
           </div>
 
           {/* ─── Info Row: CTA and Socials (Bottom) ─── */}
-          <div className="relative z-30 flex flex-col md:flex-row items-end justify-between gap-8 mt-48 md:mt-64 lg:mt-[20rem]">
-            {/* Left column: Status + Bio + CTA */}
-            <motion.div variants={itemVariants} className="flex flex-col gap-5 max-w-sm">
-              {/* CTAs */}
-              <div className="flex flex-wrap items-center gap-3 pt-2">
-                <a
-                  href="#projects"
-                  className="px-6 py-3 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] text-sm"
-                >
-                  Explore Work
-                </a>
-              </div>
+          <div className="relative z-30 flex flex-row items-center justify-between w-full mt-[100vw] sm:mt-72 md:mt-80 lg:mt-[26rem]">
+            {/* Left column: CTA */}
+            <motion.div variants={itemVariants} className="flex shrink-0">
+              <a
+                href="#projects"
+                className="px-5 py-3 md:px-6 md:py-3 rounded-full bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-semibold hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-[1.02] text-sm flex items-center gap-2"
+              >
+                Explore Work <span className="text-lg leading-none">→</span>
+              </a>
             </motion.div>
 
-            {/* Right column: Social Links (Optional, placed here to balance layout) */}
-            <motion.div variants={itemVariants} className="flex items-center gap-3">
+            {/* Right column: Social Links */}
+            <motion.div variants={itemVariants} className="flex items-center gap-2 md:gap-3 shrink-0">
               {[
                 { icon: FaGithub, href: 'https://github.com/abhishek-madar', label: 'GitHub' },
                 { icon: FaLinkedin, href: 'https://linkedin.com/in/abhishek-madar-/', label: 'LinkedIn' },
@@ -163,7 +158,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 1 }}
-        className="relative z-30 w-full py-8 mt-12 bg-transparent"
+        className="relative z-30 w-full py-4 mt-6 md:py-8 md:mt-12 bg-transparent"
       >
         <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
           <motion.div

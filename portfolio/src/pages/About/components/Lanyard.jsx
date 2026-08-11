@@ -39,7 +39,7 @@ export default function Lanyard({
         gl={{ alpha: transparent }}
         onCreated={({ gl }) => gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)}
       >
-        <ambientLight intensity={Math.PI} />
+        <ambientLight intensity={3} />
         <Physics gravity={gravity} timeStep={isMobile ? 1 / 30 : 1 / 60}>
           <Band
             isMobile={isMobile}
@@ -51,28 +51,28 @@ export default function Lanyard({
         </Physics>
         <Environment blur={0.75}>
           <Lightformer
-            intensity={2}
+            intensity={1}
             color="white"
             position={[0, -1, 5]}
             rotation={[0, 0, Math.PI / 3]}
             scale={[100, 0.1, 1]}
           />
           <Lightformer
-            intensity={3}
+            intensity={1.5}
             color="white"
             position={[-1, -1, 1]}
             rotation={[0, 0, Math.PI / 3]}
             scale={[100, 0.1, 1]}
           />
           <Lightformer
-            intensity={3}
+            intensity={1.5}
             color="white"
             position={[1, 1, 1]}
             rotation={[0, 0, Math.PI / 3]}
             scale={[100, 0.1, 1]}
           />
           <Lightformer
-            intensity={10}
+            intensity={3}
             color="white"
             position={[-10, 0, 14]}
             rotation={[0, Math.PI / 2, Math.PI / 3]}
@@ -152,12 +152,12 @@ function Band({
   );
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
-  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1.5]);
-  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1.5]);
-  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1.5]);
+  useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 2.0]);
+  useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 2.0]);
+  useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 2.0]);
   useSphericalJoint(j3, card, [
     [0, 0, 0],
-    [0, 2.25, 0]
+    [0, 3.15, 0]
   ]);
   useEffect(() => {
     if (hovered) {
@@ -196,22 +196,22 @@ function Band({
 
   return (
     <>
-      <group position={[0, 6.75, 0]}>
+      <group position={[0, 9.15, 0]}>
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
-        <RigidBody position={[0, -1.5, 0]} ref={j1} {...segmentProps}>
+        <RigidBody position={[0, -2.0, 0]} ref={j1} {...segmentProps}>
           <BallCollider args={[0.1]} />
         </RigidBody>
-        <RigidBody position={[0, -3.0, 0]} ref={j2} {...segmentProps}>
+        <RigidBody position={[0, -4.0, 0]} ref={j2} {...segmentProps}>
           <BallCollider args={[0.1]} />
         </RigidBody>
-        <RigidBody position={[0, -4.5, 0]} ref={j3} {...segmentProps}>
+        <RigidBody position={[0, -6.0, 0]} ref={j3} {...segmentProps}>
           <BallCollider args={[0.1]} />
         </RigidBody>
-        <RigidBody position={[0, -6.75, 0]} ref={card} {...segmentProps} type={dragged ? 'kinematicPosition' : 'dynamic'}>
-          <CuboidCollider args={[1.2, 1.6875, 0.015]} />
+        <RigidBody position={[0, -9.15, 0]} ref={card} {...segmentProps} type={dragged ? 'kinematicPosition' : 'dynamic'}>
+          <CuboidCollider args={[1.68, 2.3625, 0.021]} />
           <group
-            scale={3.375}
-            position={[0, -1.8, -0.075]}
+            scale={4.725}
+            position={[0, -2.52, -0.105]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
             onPointerUp={e => {

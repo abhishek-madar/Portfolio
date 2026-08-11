@@ -19,6 +19,17 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
@@ -28,7 +39,7 @@ export default function Navbar() {
       style={{ paddingTop: 'max(1rem, env(safe-area-inset-top))' }}
     >
       <div 
-        className={`flex items-center justify-between w-full max-w-7xl rounded-full px-6 py-3 transition-all duration-500
+        className={`flex items-center justify-between w-full max-w-[1400px] rounded-full px-[clamp(1rem,4vw,3rem)] py-3 transition-all duration-500
         ${scrolled ? 'bg-white dark:bg-zinc-950 shadow-xl' : 'bg-transparent'}`}
       >
         {}

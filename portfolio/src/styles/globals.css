@@ -29,9 +29,9 @@
     color: var(--color-foreground);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden;
+    overflow-x: clip;
     min-height: 100dvh;
-    min-height: -webkit-fill-available;
+    width: 100%;
   }
   *, html, body {
     scrollbar-width: none !important;

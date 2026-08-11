@@ -217,7 +217,7 @@ export default function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <section id="projects" className="relative z-10 w-full py-12 lg:py-16 overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-24">
+      <div className="max-w-[1400px] mx-auto px-[clamp(1rem,4vw,3rem)]">
         {}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -229,7 +229,7 @@ export default function Projects() {
             <span className="w-12 h-[1px] bg-blue-600 dark:bg-blue-400 transition-colors"></span>
             <span className="text-blue-600 dark:text-blue-400 font-mono text-sm tracking-widest uppercase font-bold transition-colors">Selected Work</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-zinc-900 dark:text-white drop-shadow-2xl transition-colors">
+          <h2 className="text-[clamp(2.5rem,5vw,4.5rem)] font-extrabold tracking-tight text-zinc-900 dark:text-white drop-shadow-2xl transition-colors">
             Featured Projects
           </h2>
           <p className="text-zinc-600 dark:text-slate-400 text-lg md:text-xl leading-relaxed mt-4 transition-colors">

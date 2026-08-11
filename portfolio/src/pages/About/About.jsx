@@ -6,7 +6,7 @@ import ScrambledText from '../../shared/animations/ScrambledText';
 export default function About() {
   return (
     <section id="about" className="py-12 lg:py-16 relative w-full overflow-visible flex flex-col items-center">
-      <div className="w-full max-w-7xl mx-auto px-6 relative z-10 flex-grow">
+      <div className="w-full max-w-7xl mx-auto px-[clamp(1rem,4vw,3rem)] relative z-10 flex-grow">
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-brand-charcoal dark:text-brand-offwhite mb-4 transition-colors">About Me</h2>
           <div className="w-20 h-1 bg-primary rounded-full"></div>
