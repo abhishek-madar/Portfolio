@@ -79,7 +79,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute left-1/2 -translate-x-1/2 top-4 md:top-8 lg:top-12 z-20 pointer-events-none w-[135vw] sm:w-[500px] md:w-[700px] lg:w-[850px] max-w-none"
+              className="absolute left-1/2 -translate-x-1/2 top-4 md:-top-12 lg:-top-20 z-20 pointer-events-none w-[135vw] sm:w-[400px] md:w-[600px] lg:w-[750px] max-w-none"
             >
               <div className="relative w-full flex justify-center">
                 <img
@@ -119,7 +119,7 @@ export default function Hero() {
           </div>
 
           {/* ─── Info Row: CTA and Socials (Bottom) ─── */}
-          <div className="relative z-30 flex flex-row items-center justify-between w-full mt-[100vw] sm:mt-72 md:mt-80 lg:mt-[26rem]">
+          <div className="relative z-30 flex flex-row items-center justify-between w-full mt-[100vw] sm:mt-48 md:mt-64 lg:mt-[20rem]">
             {/* Left column: CTA */}
             <motion.div variants={itemVariants} className="flex shrink-0">
               <a
