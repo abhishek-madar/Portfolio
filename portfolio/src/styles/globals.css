@@ -29,8 +29,7 @@
     touch-action: pan-x pan-y;
   }
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    @apply bg-white dark:bg-black text-zinc-950 dark:text-zinc-50;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: clip;
