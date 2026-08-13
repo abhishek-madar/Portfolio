@@ -45,7 +45,11 @@ export default function Hero() {
     <section
       id="home"
       className="relative w-full overflow-x-clip overflow-y-visible flex flex-col justify-between transition-colors"
-      style={{ minHeight: '100dvh' }}
+      style={{ 
+        minHeight: '100dvh',
+        paddingTop: 'env(safe-area-inset-top)',
+        paddingBottom: 'env(safe-area-inset-bottom)'
+      }}
     >
 
 

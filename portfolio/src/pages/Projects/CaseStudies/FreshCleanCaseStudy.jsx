@@ -62,7 +62,7 @@ export default function FreshCleanCaseStudyModal({ isOpen, onClose }) {
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 20 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="relative w-full max-w-[1200px] h-[90vh] z-[102] flex flex-col items-center justify-center"
+          className="relative w-full max-w-[1200px] h-[90dvh] z-[102] flex flex-col items-center justify-center"
         >
           {}
           <button
