@@ -19,11 +19,6 @@ export function ThemeProvider({ children }) {
       root.classList.remove('dark');
     }
     localStorage.setItem('theme', theme);
-    // Update browser chrome color to match theme (full-screen feel)
-    const themeColor = theme === 'dark' ? '#000000' : '#ffffff';
-    document.querySelectorAll('meta[name="theme-color"]').forEach(meta => {
-      meta.setAttribute('content', themeColor);
-    });
   }, [theme]);
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));

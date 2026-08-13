@@ -21,6 +21,12 @@
   --font-sans: "Times New Roman", Times, serif;
 }
 @layer base {
+  :root {
+    color-scheme: light;
+  }
+  :root.dark {
+    color-scheme: dark;
+  }
   html, body, #root {
     margin: 0;
     padding: 0;
