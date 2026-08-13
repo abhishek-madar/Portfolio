@@ -19,6 +19,11 @@ export function ThemeProvider({ children }) {
       root.classList.remove('dark');
     }
     localStorage.setItem('theme', theme);
+    const themeColor = theme === 'dark' ? '#09090b' : '#ffffff';
+    const metaThemeColor = document.getElementById('theme-color-meta');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', themeColor);
+    }
   }, [theme]);
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
