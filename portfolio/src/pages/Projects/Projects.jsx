@@ -1,7 +1,7 @@
-import csarmsPreviewImg from './assets/csarms-preview.png';
-import elixPreviewImg from './assets/elix-preview.png';
-import freshCleanImg from './assets/freshclean-preview.png';
-import lifeLinkPreviewImg from './assets/lifelink-preview.png';
+import csarmsPreviewImg from './assets/csarms-preview.webp';
+import elixPreviewImg from './assets/elix-preview.webp';
+import freshCleanImg from './assets/freshclean-preview.webp';
+import lifeLinkPreviewImg from './assets/lifelink-preview.webp';
 import { useState, useRef, useEffect, useId } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';

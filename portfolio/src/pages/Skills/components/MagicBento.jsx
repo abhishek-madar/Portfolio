@@ -1,10 +1,10 @@
 import { useRef, useEffect, useCallback, useState, forwardRef } from 'react';
 import { gsap } from 'gsap';
 import '../css/MagicBento.css';
-export const DEFAULT_PARTICLE_COUNT = 12;
-export const DEFAULT_SPOTLIGHT_RADIUS = 300;
-export const DEFAULT_GLOW_COLOR = '132, 0, 255';
-export const MOBILE_BREAKPOINT = 768;
+const DEFAULT_PARTICLE_COUNT = 12;
+const DEFAULT_SPOTLIGHT_RADIUS = 300;
+const DEFAULT_GLOW_COLOR = '132, 0, 255';
+const MOBILE_BREAKPOINT = 768;
 const createParticleElement = (x, y, color = DEFAULT_GLOW_COLOR) => {
   const el = document.createElement('div');
   el.className = 'particle';
@@ -238,7 +238,7 @@ export const ParticleCard = forwardRef(({
     </div>
   );
 });
-export const GlobalSpotlight = ({
+const GlobalSpotlight = ({
   gridRef,
   disableAnimations = false,
   enabled = true,
@@ -351,12 +351,12 @@ export const GlobalSpotlight = ({
   }, [gridRef, disableAnimations, enabled, spotlightRadius, glowColor]);
   return null;
 };
-export const BentoCardGrid = forwardRef(({ children, className = '' }, ref) => (
+const BentoCardGrid = forwardRef(({ children, className = '' }, ref) => (
   <div className={`bento-section ${className}`} ref={ref}>
     {children}
   </div>
 ));
-export const useMobileDetection = () => {
+const useMobileDetection = () => {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);

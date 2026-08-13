@@ -3,7 +3,7 @@ import { ArrowDown, Mail } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa6';
 import { Icon } from '@iconify/react';
 // IMPORTANT: Pointing to the new .png transparent cutout provided by the user
-import profilePhoto from './hero.png';
+import profilePhoto from './hero.webp';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -53,9 +53,7 @@ export default function Hero() {
     >
 
 
-      {/* Ambient glow effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] rounded-full bg-blue-500/5 dark:bg-blue-500/10 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[400px] rounded-full bg-amber-400/5 dark:bg-amber-500/8 blur-[100px] pointer-events-none" />
+      {/* Ambient glow effects removed */}
 
       {/* ─── Main Content ─── */}
       <div className="relative z-10 flex-1 flex flex-col justify-center pt-28 md:pt-32">

@@ -1,15 +1,17 @@
+import { lazy, Suspense } from 'react';
 import Navbar from '../shared/components/Navbar';
 import Home from '../pages/Home/Home';
-import Projects from '../pages/Projects/Projects';
-import Skills from '../pages/Skills/Skills';
-import Education from '../pages/Education/Education';
-import Achievements from '../pages/Achievements/Achievements';
-import About from '../pages/About/About';
-import Contact from '../pages/Contact/Contact';
 import Footer from '../shared/components/Footer';
 import SmoothScroll from '../shared/components/SmoothScroll';
 import Section3DWrapper from '../shared/animations/Section3DWrapper';
-import Silk from '../shared/ui/Silk';
+
+const Projects = lazy(() => import('../pages/Projects/Projects'));
+const Skills = lazy(() => import('../pages/Skills/Skills'));
+const Education = lazy(() => import('../pages/Education/Education'));
+const Achievements = lazy(() => import('../pages/Achievements/Achievements'));
+const About = lazy(() => import('../pages/About/About'));
+const Contact = lazy(() => import('../pages/Contact/Contact'));
+
 export default function App() {
   return (
     <SmoothScroll>
@@ -18,27 +20,19 @@ export default function App() {
         paddingLeft: 'env(safe-area-inset-left)',
         paddingRight: 'env(safe-area-inset-right)'
       }}>
-        {}
-        <div className="fixed inset-0 z-0 pointer-events-none opacity-50 dark:opacity-40 transition-opacity">
-          <Silk 
-            speed={3} 
-            scale={0.8} 
-            color="#847b94" 
-            noiseIntensity={1.5} 
-            className="w-full h-full" 
-          />
-        </div>
-        {}
+        {/* Removed heavy Silk 3D background */}
         <div className="fixed inset-0 z-[1] bg-noise pointer-events-none"></div>
         <Navbar />
         <main className="relative z-10 flex flex-col items-center w-full perspective-[1200px] overflow-visible">
           <Home />
-          <Section3DWrapper><Projects /></Section3DWrapper>
-          <Section3DWrapper><Skills /></Section3DWrapper>
-          <Section3DWrapper><Education /></Section3DWrapper>
-          <Section3DWrapper><Achievements /></Section3DWrapper>
-          <div className="relative z-50 w-full flex flex-col items-center"><About /></div>
-          <Section3DWrapper><Contact /></Section3DWrapper>
+          <Suspense fallback={<div className="h-screen w-full flex items-center justify-center opacity-50">Loading sections...</div>}>
+            <Section3DWrapper><Projects /></Section3DWrapper>
+            <Section3DWrapper><Skills /></Section3DWrapper>
+            <Section3DWrapper><Education /></Section3DWrapper>
+            <Section3DWrapper><Achievements /></Section3DWrapper>
+            <div className="relative z-50 w-full flex flex-col items-center"><About /></div>
+            <Section3DWrapper><Contact /></Section3DWrapper>
+          </Suspense>
         </main>
         <Footer />
       </div>
