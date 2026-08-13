@@ -47,7 +47,6 @@ export default function Hero() {
       className="relative w-full overflow-x-clip overflow-y-visible flex flex-col justify-between transition-colors"
       style={{ 
         minHeight: '100dvh',
-        paddingTop: 'env(safe-area-inset-top)',
         paddingBottom: 'env(safe-area-inset-bottom)'
       }}
     >
